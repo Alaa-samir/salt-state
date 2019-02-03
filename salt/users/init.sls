@@ -89,7 +89,7 @@ remove sudo access {{user}}:
 # This is to avoid having to manage passwords in addition to keys
 /etc/sudoers.d/sudonopasswd:
   file.managed:
-    - source: salt://users/files/sudoers.d/sudonopasswd
+    - source: salt://salt/users/files/sudoers.d/sudonopasswd
     - user: root
     - group: root
     - mode: 440
