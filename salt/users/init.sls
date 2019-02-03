@@ -47,8 +47,10 @@ normal {{user}}:
 {% if users == user %}
 
 remove {{user}}:
-  user.absent: {{user}}
-  group.absent: {{user}}
+  user.absent: 
+    - name: {{user}}
+  group.absent: 
+    - name: {{user}}
 
 
 {{user}}_root_key:
